@@ -10,9 +10,11 @@
 
 <div id="quiz-contanier">
     <h1>Coding Quiz</h1>
-    <button id="start-btn" onclick="startQuiz()"></button>
+    <div id="timer">Time: <span id="display-timer">60</span></div>
+    <button id="start-btn" onclick="startQuiz()">Start Quiz</button>
     <div id="question-container"></div>
     <div id="result-container"></div>
+    <button id="refresh-btn" onclick="refreshPage()">Refresh</button>
 </div>
 
     <script src="assets/script.js"></script>

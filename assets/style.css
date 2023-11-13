@@ -12,8 +12,8 @@ quiz-container{
     align-items: center;
 }
 
-start-btn{
-    margin-bottom: 20px;
+start-btn,refresh-btn{
+    margin-bottom: 100px;
 }
 
 question-container{
@@ -28,6 +28,11 @@ result-container{
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+}
+
+timer{
+    font-size: 24px;
+    margin-top: 10px;
 }
 
 button{

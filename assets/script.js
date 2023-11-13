@@ -17,7 +17,7 @@ const questions = [
     {
         question: "What is Github used for",
         answers: ["a cheatsheet", "a social media for tutors and teachers", "a code hosting platform for version control and collaboration", "a programming langauge", "a text editor for coding"],
-        correctAnswer: ["a social media for developers", "a code hosting platform for version control and collaboration"] // Added a missing comma here
+        correctAnswer: "a code hosting platform for version control and collaboration"
     },
     {
         question: "What does computer science mean?", // Added a missing comma here
@@ -44,6 +44,7 @@ function showQuestion() {
         <h2>${currentQuestion.question}</h2>
         ${answersHTML}
     `;
+    document.getElementById("question-container").style.display = "block";
 }
 
 
@@ -61,12 +62,16 @@ function checkAnswer(userAnswer) {
         }
     } else {
         timeLeft -= 10;
+        if (timeLeft < 0) {
+            timeLeft = 0;
+        }
     }
 }
 
 function updateTimer() {
     if (timeLeft > 0) {
         timeLeft--;
+        document.getElementById("display-timer").innerHTML = timeLeft; // Add this line to update the displayed timer
     } else {
         endQuiz();
     }
@@ -91,4 +96,8 @@ function saveScore() {
     const initials = document.getElementById("initials").value;
     console.log("Initials", initials);
     console.log("Score:", timeLeft);
+}
+
+function refreshPage(){
+    location.reload();
 }

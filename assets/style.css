@@ -1,0 +1,39 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+quiz-container{    
+    max-width: 800px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+start-btn{
+    margin-bottom: 20px;
+}
+
+question-container{
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+result-container{
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+button{
+    margin: 5px;
+}
+
+input {
+    margin: 10px 0;
+}
